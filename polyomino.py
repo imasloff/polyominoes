@@ -21,7 +21,7 @@ class RPolyomino(Polyomino):
 
 class LPolyomino(Polyomino):
     def set_positions(self, table):
-        if self.width <= 2 and self.height <= 2:
+        if self.width == self.height:
             rotations = [
                 table,
                 rotate(table),

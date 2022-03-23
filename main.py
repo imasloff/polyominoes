@@ -17,6 +17,8 @@ def algorithm(matrix, solution):
             min = count
             n_min = col
     c = n_min
+    if np.sum(matrix[:, c]) == 0:
+        return False
     tmp = matrix
     for i in range(matrix[:, c].size):
         solution.append(matrix[i])
@@ -56,9 +58,9 @@ if __name__ == '__main__':
     #для запуска программы:
     # 1. поменять значения входных параметров (table_shape, r_input, l_input)
     # 2. запустить main.py в любой удобной среде, поддерживающей python 3 (код написан в PyCharm)
-    table_shape = (3, 5)
-    r_input = [((2, 2), 1)]
-    l_input = [((3, 2), 1), ((2, 2), 2)]
+    table_shape = (4, 4)
+    r_input = [((1, 1), 1)]
+    l_input = [((4, 4), 2)]
 
     if main(table_shape, r_input, l_input):
         print("Правда")
